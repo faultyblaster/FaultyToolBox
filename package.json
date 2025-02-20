@@ -1,6 +1,6 @@
 {
     "name": "faultytoolbox",
-    "displayName": "FaultyToolBox",
+    "displayName": "Faulty Tool Box",
     "description": "Tooling for multiple languages, not needed but nice to have",
     "version": "0.0.1",
     "engines": {
@@ -18,8 +18,14 @@
     "contributes": {
         "commands": [
             {
-                "command": "faultytoolbox.helloWorld",
-                "title": "Hello World"
+                "command": "faultytoolbox.sayHi",
+                "title": "Say Hi",
+                "category": "Beta"
+            },
+            {
+                "command": "faultytoolbox.sayStop",
+                "title": "Say Stop",
+                "category": "Beta"
             }
         ]
     },

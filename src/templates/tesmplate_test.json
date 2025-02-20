@@ -1,0 +1,8 @@
+{
+    "ts": {
+        "alias": "TypeScript",
+        "id": "ts",
+        "extension": "ts",
+        "requireNamespace": false
+    }
+}
