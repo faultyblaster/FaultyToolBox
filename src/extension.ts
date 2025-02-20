@@ -1,20 +1,16 @@
 import * as vscode from 'vscode';
+import { registerAllCommands } from './commands/allCommands';
+import { StickJack } from './stickjack/stickjack';
+
+export let logger: StickJack;
 
 export function activate(context: vscode.ExtensionContext) {
-    console.log(
-        'Congratulations, your extension "faultytoolbox" is now active!'
-    );
+    logger = new StickJack();
 
-    const disposable = vscode.commands.registerCommand(
-        'faultytoolbox.helloWorld',
-        () => {
-            vscode.window.showInformationMessage(
-                'Hello World from FaultyToolBox!'
-            );
-        }
-    );
+    // BETA commands: Be aware, this commands can be buggy
+    registerAllCommands(context);
 
-    context.subscriptions.push(disposable);
+    context.subscriptions.push();
 }
 
 export function deactivate() {}
